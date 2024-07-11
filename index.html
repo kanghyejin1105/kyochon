@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>kyochon chicken</title>
+  <style type = "text/css">
+
+    *{margin:0; padding: 0;}
+    ul{list-style: none;}
+    img{border: 0; vertical-align: 0;}
+    a{text-decoration: none; color: #000;}
+    
+    .clearFix:after{
+      content:"";
+      display: block;
+      clear:both;
+    }
+    #header .header_bar{
+      width: 1550px;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      }
+    
+    #header .logo{float:left;}
+
+    #header .gnb{
+      float:right;
+      position: relative;
+    }
+
+    #header .gnb>li:hover .sub{
+      display: block;
+        }
+        
+    #header .gnb>li .sub li:hover a{
+      color:aliceblue;
+    }
+
+    #header .gnb>li .sub{
+      width:150px; height: 200px;
+      position: absolute;
+      left:1px; top:50px;
+      display: none;
+      background-color: #f9ba1c;
+    }
+    #header .gnb>li .sub>li{
+      text-align: center;
+      line-height: 40px;
+      font-size: 11pt;
+    }
+
+    #header .gnb>li{
+      float:left;
+      position: relative;
+      width: 150px;
+      line-height: 50px;
+    }
+    #header .gnb ul{display: none;}
+    #header .gnb:hover ul{display: block; text-align: center;
+    line-height: 40px;}
+
+
+
+    #header .gnb>li a {color: rgb(53, 28, 9); display: block; text-align: center;
+    }
+    #header .gnb>li a:hover{color:#e3c000;}
+    
+    .gnb>li .sub{display: none;}
+    .gnb li:hover .sub{display: block;}
+
+
+    #section .page1{
+      width:100%; height: 1080px;
+      background-image: url(background.jpg);
+      background-size: cover;
+    }
+    #section .page1 .main, .title_2, .title_3, .title_4{
+      text-align: center;
+      color:aliceblue;
+      box-sizing: border-box;
+      padding-top:400px;
+      font-size: 70pt;
+    }
+
+#section .page2, #section .page3, #section .page4{
+  width:100%; height:1080px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+}
+
+    #section .page2{background-image: url(page2.jfif);}
+    
+    #section .page3{background-image: url(page3.jfif);}
+    #section .page4{background-image: url(page4.jfif);}
+    #section .page2 p, #section .page3 p, #section .page4 p{
+      text-align: center;
+      color: aliceblue;
+      padding-top: 50px;
+      font-size: 13pt;
+    }
+    #section .box1{
+      width: 500px; height: 5px;
+      background-color:aliceblue;
+      margin: 0 auto;
+    } 
+    
+    #section .brand{
+      width: 1320px;
+      margin:0 auto;
+      overflow: hidden;
+    }
+    #section .brand h1{
+      font-size: 45pt; padding: 50px; text-align: center;
+    }
+    #section .brand_img{float:left;}
+    #section .brand_img li{
+      float: left; width:300px; height: 120px;
+      margin-top:20px; margin-bottom:50px;margin-left: 30px;
+    }
+    #section .brand_img li a{
+      width: 300px; height: 120px;
+    }
+    
+    #section .brand_img li img{
+      width: 280px; 
+      }
+    #section .brand_img li:first-child{
+      padding-top: 50px;
+      }
+      
+    #section .brand_img li:last-child{
+      padding-top: 50px;
+      }
+
+    #section .brand .chicken_img{
+      float: left;
+    }
+    #section .brand .chicken_img li{
+      float: left;
+    }
+    #section .brand .chicken_img li img{
+      float: left; width: 300px; margin-left: 20px; margin-bottom: 20px;
+    }
+      #section .brand .chicken_img p{
+        font-size: 15pt; margin-left: 100px;
+        font-weight: bolder;
+   
+      }
+    
+
+    #section .introduce .title_introduce{
+      width: 100%; font-size: 45pt; margin:0 auto; text-align: center;
+      padding-top: 50px;padding-bottom: 50px;
+    }
+    #section .introduce .ask_1{
+      overflow: hidden;
+    }
+    #section .introduce .ask_1 .ask_con1{
+      float: left; 
+      width: 725px; height: 500px;
+      box-sizing: border-box;
+      margin-left: 200px;
+      padding: 55px;
+    }
+    
+    #section .introduce .ask_1 .ask_con1>h1{
+      width: 720px;height: 20px; margin-top: 80px; font-size: 20pt;
+    }
+    #section .introduce .ask_1 .ask_con1>p{
+      margin-top: 30px;
+    }
+    #section .introduce .ask_1 .ask_con1 input{
+      width: 110px;height: 45px;
+      margin-top: 50px;background-color: #f9ba1c;
+      border: 1px solid rgba(0, 0, 139, 0);
+      border-radius: 5px; font-weight: bolder;
+    }
+    #section .introduce .ask_1 .ask_con_img{
+      float: right;
+      width: 925px;height: 500px;
+    }
+    #section .introduce .ask_1 .ask_con_img img{
+      width: 1008px; height: 500px; object-fit: cover;
+    }
+
+    #section .introduce .ask_2{overflow: hidden;}
+    #section .introduce .ask_2 .ask_con_img{
+      float: left;width: 925px;height: 500px;
+    }
+    #section .introduce .ask_2 .ask_con2{
+      float: left; 
+      width: 725px; height: 500px;
+      box-sizing: border-box;
+      margin-left: 200px;
+      padding: 55px;
+    }
+    #section .introduce .ask_2 .ask_con_img img{
+      width: 1008px; height: 500px; object-fit: cover;
+    }
+    #section .introduce .ask_2 .ask_con2>h1{
+      width: 720px;height: 20px; margin-top: 80px; font-size: 20pt;
+    }
+    #section .introduce .ask_2 .ask_con2>p{
+      margin-top: 30px;}
+      
+    #section .introduce .ask_2 .ask_con2 input{
+      width: 110px;height: 45px;
+      margin-top: 50px;background-color: #f9ba1c;
+      border: 1px solid rgba(0, 0, 139, 0);
+      border-radius: 5px; font-weight: bolder;}
+      
+    #section .story .title_story{
+        width: 100%; font-size: 45pt; margin:0 auto; text-align: center;
+        padding-top: 50px;padding-bottom: 50px;
+      }
+
+    #section .story .story_con_group{
+      overflow: hidden; width: 1450px; margin: 0 auto;
+      box-sizing: border-box;
+    }
+    #section .story .story_con_group li{
+      float: left; margin-left: 25px;
+
+    }
+    #section .story .story_con_group .story_arc{
+      float: left; width:300px;}
+
+    #section .story .story_con_group li:first-child{
+      width: 47px; height: 47px; float: left;
+      margin-top:200px;
+      }
+    #section .story .story_con_group li:last-child{
+      width: 47px; height: 47px; float: left;margin-top:200px;
+      }
+    
+    #section .story .story_con_group>li img{
+      width: 300px; height: 470px; object-fit: cover;
+    }
+
+    #section .story .story_con_group>li:last-child img{
+      width: 47px; height: 47px;
+    }
+    #section .story .story_con_group>li:first-child img{
+      width: 47px; height: 47px;
+    }
+    #section .story .story_con_group .story_con{
+      width: 200px; height: 250px; margin-top: 20px;
+    }
+    #section .story .story_con_group h2{
+      font-size: 15pt; padding-top: 10px;}
+    #section .story .story_con_group .story_date{
+      font-size: 10pt; padding-top: 10px;
+      }
+    #section .story .story_button{
+      width: 1400px; margin: 0 auto; text-align: center;}
+
+    #section .story .story_button input{
+      width: 175px; height: 52px; background-color: white;
+      border: 3px solid black; font-size: 11pt; font-weight: bolder;
+      cursor:pointer; margin-bottom: 50px;
+    }
+    #section .story .story_button input:hover{
+      background-color:black; color:white;
+    }
+
+    #section .esg{
+      background-image: url(bg_esgstep1.jpg);
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+      #section .esg .title_esg{
+      width: 100%; font-size: 45pt; margin:0 auto; text-align: center;
+      padding-top: 50px;padding-bottom: 50px;
+    }
+    #section .esg .esg_con_group{
+      width: 1320px; overflow: hidden; margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    #section .esg .esg_con_group li{
+      float: left; width:400px; height: 450px; 
+      box-sizing: border-box; margin:10px;
+      border: 0px solid black; border-radius: 10px;
+      overflow: hidden; background-color: white;
+      margin-left:30px;
+    }
+
+    #section .esg .esg_con_group li img{
+      width: 400px; height: 238px;
+    }
+
+    #section .esg .esg_con_group .esg_con{
+      text-align: center;
+      line-height: 30px; margin-top: 20px; padding: 20px;;
+    }
+
+    #section .esg .esg_con_group .esg_con .esg_tag{
+      font-size: 15pt;
+    }
+    #section .esg .esg_con_group .esg_con h2{
+      font-size: 20px;
+    }
+    #section .esg .esg_con_group .esg_con .esg_date{
+      font-size: 12pt;margin-top: 10px;
+    }
+
+    #section .event{
+      width: 100%; height: 728px; margin: 0 auto;
+    }
+    #section .title_event{
+      width: 100%; font-size: 45pt; margin:0 auto; text-align: center;
+      padding-top: 50px;padding-bottom: 50px;
+    }
+
+    #section .event .event_img{
+      text-align: center;
+    }
+
+    #section .instagram{
+      background-color: #f9ba1c; 
+        width: 100%; overflow: hidden;
+    }
+    #section .instagram .title_insta{
+      width: 1320px; margin: 0 auto; text-align: center;
+      padding-top: 150px; font-size: 40pt;
+        margin-bottom: 50px;
+    }
+    #section .instagram span{
+          color:white;
+      }
+    #section .instagram .insta_con_group{
+    width: 1320px;
+    overflow:hidden; 
+    margin: 0 auto;}
+    
+      
+      #section .instagram .insta_con_group li{
+          float:left;
+          width: 420px; height: 560px; text-align: center;
+          margin-left: 20px; background-color: white;
+          
+          
+      }
+      
+      #section .instagram .insta_con_group li img{
+          width:428px; height: 420px;      }
+      
+
+      #section .instagram .insta_con_group .insta_con{
+        padding:35px;
+      }
+      #section .instagram .insta_con_group .insta_con h2{
+          font-size: 15pt;
+      }
+      
+      #section .instagram .insta_con_group .insta_con .insta_date{
+          font-size: 12pt; margin-top: 20px;
+      }
+      
+    #footer .footer_box1{ overflow: hidden;
+          width: 1320px; margin: 0 auto; }
+        #footer .footer_box1 .footer_logo{
+          float: left; margin-top: 100px;
+        }
+        #footer .footer_box1 p{
+            float:left; margin-top: 100px;margin-left:50px;
+            font-weight: bolder; font-size: 14pt;margin-bottom: 30px;
+        }
+        #footer .footer_box1 p span{
+            font-size:20pt; margin-top: 20px;
+        }
+        #footer .footer_box1 .footer_sns{
+            float:right; margin-top:100px;
+        }
+        #footer .footer_box1 .footer_sns li{
+            float:left; margin-left:20px;
+        }
+        
+        #footer .footer_box2{overflow: hidden;
+        width: 1320px; margin-left: 205px; }
+        
+        #footer .footer_box2 .footer_info{float: right;
+        }
+        #footer .footer_box2 .footer_info li{float: left;
+        margin-left: 20px; font-weight: bolder;}
+        
+        #footer .footer_box2 .footer_info li:nth-child(3){
+            color:#f9ba1c;}
+        #footer .footer_box3{width: 1320px; height: 60px;
+          margin-top: -190px; }
+        
+        #footer .footer_box3 p{
+            font-size: 10pt; margin-right: 100px;
+        }
+        #footer .footer_box3 p span{
+            font-size: 11pt; font-weight: bolder
+        }
+      
+
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="header_bar clearFix">
+      <h1><img class = "logo" src="kyochon_logo.png" alt="교촌로고"></h1>
+      <ul class = "gnb clearFix">
+        <li>
+          <a href="#">기업정보</a>
+            <ul class="sub clear">
+              <li><a href="#">경영이념</a></li>
+              <li><a href="#">about교촌</a></li>
+              <li><a href="#">CEO 메시지</a></li>
+              <li><a href="#">주요 계열사</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">사업영역</a>
+            <ul class="sub">
+              <li><a href="#">브랜드</a></li>
+              <li><a href="#">제품소개</a></li>
+              <li><a href="#">국내사업</a></li>
+              <li><a href="#">글로벌</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">ESG</a>
+          <ul class="sub">
+            <li><a href="#">사회공헌</a></li>
+            <li><a href="#">ESG소식</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">홍보센터</a>
+            <ul class="sub">
+              <li><a href="#">STORY</a></li>
+              <li><a href="#">CI/BI소개</a></li>
+              <li><a href="#">교촌역사관</a></li>
+              <li><a href="#">미디어센터</a></li>
+              <li><a href="#">사보</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">투자정보</a>
+            <ul class="sub">
+              <li><a href="#">기업지배구조</a></li>
+              <li><a href="#">공시정보</a></li>
+              <li><a href="#">재무정보</a></li>
+              <li><a href="#">IR자료실</a></li>
+              <li><a href="#">공고</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">인재육성</a>
+            <ul class="sub">
+              <li><a href="#">인재채용</a></li>
+              <li><a href="#">성장</a></li>
+              <li><a href="#">워라벨</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">스포츠</a>
+            <ul class="sub">
+              <li><a href="#">교촌1991</a></li>
+              <li><a href="#">레이디스오픈</a></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="section">
+  <div class="page_all">
+    <div class="page1">
+      <h1 class="main">KYOCHON 1991</h1>
+    </div>
+    <div class="page2">
+      <h1 class="title_2">상생</h1>
+      <div class="box1"></div>
+      <p>더불어 살고 나누며 살아야 한다.<br>상생하는 사회를 위해 노력합니다.</p>
+    </div>
+    <div class="page3">
+        <h1 class="title_3">정도</h1>
+        <div class="box1"></div>
+        <p>기업가 정신으로 투명 경영과 윤리 경영을 실천합니다.<br>
+            가맹점 및 파트너사와 공정한 거래를 통해 상생 협력 관계를 구축합니다.<br>우리가 만든 정직한 이야기와 정직한 맛을 소비자에게 전달합니다.</p>
+    </div>
+    <div class="page4">
+        <h1 class="title_4">나눔</h1>
+        <div class="box1"></div>
+        <p>더불어 사는 사회에서 기업의 사회적 책임을 다하며 사회 공헌 활동을 전개합니다.<br>미래의 꿈과 희망이 자라도록 교육의 기회를 마련하고 소외 계층을 지원하며 지역 사회<br>구성원과 함께 성장합니다.</p>
+    </div>
+    </div>
+    <div class="brand">
+      <h1 class ="title_brand">BRAND</h1>
+        <ul class="brand_img">
+          <li><a href="#"><img src="brand1.jfif" alt="교촌브랜드"></a></li>
+          <li><a href="#"><img src="brand2.png" alt="플레이버스"></a></li>
+          <li><a href="#"><img src="brand3.jfif" alt="문베어"></a></li>
+          <li><a href="#"><img src="brand4.jfif" alt="발효공방"></a></li>
+        </ul>
+        <ul class = "chicken_img">
+          <li><img src="original.png" alt="오리지널">
+          <p>교촌시리즈</p></li>
+          <li><img src="red.png" alt="레드">
+          <p>레드시리즈</p></li>
+          <li><img src="honey.png" alt="허니">
+          <p>허니시리즈</p></li>
+          <li><img src="black.png" alt="블랙">
+          <p>블랙시크릿시리즈</p></li>
+        </ul>
+      </div>
+    <div class="introduce">
+        <h1 class = "title_introduce"> 가맹점 개설안내</h1>
+        <div class="ask_1">
+          <div class="ask_con1">
+            <h1>국내 사업문의</h1>
+            <p>확실한 사명감을 지닌 전체 임직원들의 개척정신과 다년간 직영점을 운영하여 터득한 매장 경영의 노하우를 바탕으로 가맹점주님들의 교육부터 매장 오픈 후 세세한 부분까지 지도해 드리고 있습니다.</p>
+            <input type="button" value="가맹문의">
+          </div>
+          <div class="ask_con_img">
+          <img src="ask1.jfif" alt="가맹문의1">
+          </div>
+        </div>
+        <div class="ask_2">
+          <div class="ask_con_img">
+          <img src="ask2.jfif" alt="가맹문의2">
+        </div>
+          <div class="ask_con2">
+            <h1>해외 사업문의</h1>
+            <p>세상의 모든 사람들의 건강하고 맛있는 치킨을 즐길 수 있기를 바라는 마음으로 가장 한국적인 맛으로 치킨 브랜드의 새로운 패러다임을 열었습니다. 세계인이 함께하는 브랜드 '교촌'에 대한 더 큰 가능성을 가지고 맛에 대해 오직 한 길을 달려나가는 글로벌 기업의 리더가 되겠습니다.</p>
+            <input type="button" value="가맹상담">
+          </div>
+        </div>
+      </div>
+    <div class="story">
+      <h1 class="title_story">STORY</h1>
+    <ul class = "story_con_group">
+      <li><img src="slider_prev.png" alt="이전아이콘"></li>
+      <li class = "story_arc">
+        <img src="story_1.jfif" alt="기사1">
+          <div class="story_con">
+            <p class="story_tag">#브랜드 #교촌 f&amp;b</p>
+            <h2>교촌에프앤비, 1분기 실적 발표 “반등 신호탄 쐈다”</h2>
+            <p class="story_date">2024-05-17</p>
+          </div>
+      </li>
+      <li class = "story_arc">
+        <img src="story_2.jfif" alt="기사2">
+          <div class="story_con">
+            <p class="story_tag">#행사 #브랜드 #교촌 f&amp;b</p>
+            <h2>교촌에프앤비, 3일(금)부터 ‘제10회 교촌 1991 레이디스 오픈’ 개최</h2>
+            <p class="story_date">2024-05-02</p>
+          </div>
+      </li>
+      <li class = "story_arc">
+        <img src="story_3.jfif" alt="기사3">
+          <div class="story_con">
+            <p class="story_tag">#행사 #브랜드 #교촌 f&amp;b</p>
+            <h2>교촌치킨, ‘MZ세대 입맛과 마음 사로잡는다’... 방송인 노홍철과 ‘교촌 치톡 콘서트’ 개최</h2>
+            <p class="story_date">2024-05-08</p>
+          </div>
+      </li class = "story_arc">
+      <li>
+        <img src="story_4.jfif" alt="기사4">
+          <div class="story_con">
+            <p class="story_tag">#캠페인 #가맹점 #브랜드 </p>
+            <h2>교촌치킨, 1991명 예비 엄마 위해 준비했다...‘교촌 디어 맘(Dear Mom)’ 이벤트 실시</h2>
+            <p class="story_date">2024-04-30</p>
+        </div>
+      </li>
+      <li><img src="slider_next.png" alt="다음아이콘"></li>
+    </ul>
+      <div class="story_button">
+        <input type="button" value="블로그 더보기">
+      </div>
+    </div>
+    <div class="esg">
+        <h1 class="title_esg">ESG</h1>
+        <ul class = "esg_con_group">
+          <li>
+            <img src="esg1.jfif" alt="기사사진1">
+              <div class="esg_con">
+                <p class="esg_tag">#자립준비 </p>
+                <h2>교촌에프앤비, 청년들의 안정적인 자립 지원한다</h2>
+                <p class="esg_date">2024-06-03</p>
+              </div>
+          </li>
+          <li>
+            <img src="esg2.jfif" alt="기사사진2">
+              <div class="esg_con">
+                <p class="esg_tag">#미래세대#아동건강</p>
+                <h2>교촌치킨, 미래 세대 ‘나눔 선순환’ 신호탄… ‘제3회 아동건강 지원사업’ 시작</h2>
+                <p class="esg_date">2024-04-08</p>
+              </div>
+          </li>
+          <li>
+            <img src="esg3.jfif" alt="기사사진3">
+              <div class="esg_con">
+                <p class="esg_tag">#미래세대#바르고봉사단</p>
+                <h2>교촌에프앤비 ‘바르고 봉사단’, 초등학교 특수학급 학생 사회화 훈련 동참</h2>
+                <p class="esg_date">2024-04-05</p>
+              </div>
+          </li>
+        </ul>
+  </div> 
+  <div class="event">
+    <h1 class="title_event">EVENT</h1>
+    <div class="event_img">
+      <img src="event.jfif" alt="이벤트이미지">
+    </div>
+  </div>
+  <div class="instagram">
+    <h1 class="title_insta">Hello!<br>
+    <span>Kyochon Instagram</span>
+    </h1>
+    <ul class = "insta_con_group">
+      <li>
+        <img src="insta1.jfif" alt="인스타1">
+          <div class="insta_con">
+            <h2>교촌치킨의 n번째 시그니처 메뉴</h2>
+            <p class = "insta_date">2023.05.24 </p>
+          </div>
+      </li>
+      <li>
+        <img src="insta2.jfif" alt="인스타2">
+          <div class="insta_con">
+            <h2>교촌 무나매표소에 오신걸 환영합니다</h2>
+            <p class = "insta_date">2023.05.16 </p>
+          </div>
+      </li>
+      <li>
+        <img src="insta3.jfif" alt="인스타3">
+          <div class="insta_con">
+            <h2>서포터즈 K-스피커스 2기 모집</h2>
+            <p class = "insta_date">2023.05.16 </p>
+          </div>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="footer_box1">
+        <h1 class="footer_logo"><img src="kyochon_logo.png" alt="교촌로고"></h1>
+        <p>대표번호<br><span>031.371.3500</span></p>
+        <ul class = "footer_sns">
+            <li><img src="ikon_twit.png" alt="트위터"></li>
+            <li><img src="ikon_face.png" alt="페북"></li>
+            <li><img src="ikon_you.png" alt="유튭"></li>
+            <li><img src="ikon_insta.png" alt="인스타"></li>
+        </ul>
+    <div class="footer_box2">
+            <ul class="footer_info">
+                <li>이용약관</li>
+                <li>|</li>
+                <li>개인정보 처리방침</li>
+                <li>|</li>
+                <li>이메일무단수집거부</li>
+                <li>|</li>
+                <li>찾아오시는길</li>
+            </ul>
+    </div>
+    <div class="footer_box3">
+            <p><span>사업장소재지</span> :39852 경상북도 칠곡군 가산면 송신로 78<br><span>본사 주소</span> : 13453 경기도 성남시 수정구 금토로80번길 15-3(금토동) 교촌1991빌딩 <span>상호명</span> : 교촌에프앤비(주)
+
+                <span>대표이사</span> : 송종화<br>
+
+                <span>소비자상담번호</span> : 080-320-3000
+
+                <span>사업자등록번호</span> : 513-81-16574
+
+                <span>통신판매업신고</span> : 2012-경상북도칠곡-00023호<br>
+
+                <span>개인정보보호책임자</span> : 신용우COPYRIGHT 2015 © KYOCHON F&amp;B. ALL RIGHTS RESERVED.</p>
+    </div>
+        
+    </div>
+  </div>
+</body>
+</html>
